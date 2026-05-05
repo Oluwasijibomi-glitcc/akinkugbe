@@ -1,0 +1,105 @@
+---
+title: 'Final Project'
+author: 'Siji Akinkugbe, Gad Runkundo & Craig Chipendo'
+output:
+  pdf_document: default
+  word_document: default
+always_allow_html: yes
+fontsize: 11pt
+---
+```{r}
+library(dplyr)
+library(glmnet)
+library(tensorflow)
+library(keras3)
+library(Matrix)
+library(readr)
+library(lubridate)
+library(tidyr)
+
+```
+
+
+
+### Importing Walmart Dataset
+```{r}
+stores <- read.csv('https://zhang-datasets.s3.us-east-2.amazonaws.com/stores.csv')
+sales <- read.csv('https://zhang-datasets.s3.us-east-2.amazonaws.com/sales.csv')
+features <- read.csv('https://zhang-datasets.s3.us-east-2.amazonaws.com/features.csv')
+```
+
+### Combining datasets to create one dataset
+
+```{r}
+
+sales <- sales %>%
+  mutate(Date = parse_date_time(Date, orders = c("ymd", "mdy", "dmy")))
+
+features <- features %>%
+  mutate(Date = parse_date_time(Date, orders = c("ymd", "mdy", "dmy"))) %>%
+  select(-IsHoliday)
+
+
+final_dataset <- sales %>%
+  left_join(features, by = c("Store", "Date")) %>%
+  left_join(stores, by = "Store")
+
+
+final_dataset <- final_dataset %>%
+  mutate(
+    Date = as.Date(Date), 
+    across(starts_with("MarkDown"), ~replace_na(., 0)),
+    across(CPI, ~replace_na(., median(., na.rm = TRUE))),
+    across(Unemployment, ~replace_na(., median(., na.rm = TRUE)))
+  ) 
+  
+final_dataset<- final_dataset[final_dataset$Weekly_Sales >= 0, ]
+rownames(final_dataset) <- NULL
+
+
+  
+
+str(final_dataset$Date)
+head(final_dataset)
+summary(final_dataset)
+
+nrow(final_dataset)
+sum(is.na(final_dataset))
+
+```
+```{r}
+final_dataset <- final_dataset %>%
+  mutate(
+    Week  = isoweek(Date),   # week of year
+    Month = month(Date),     # month
+    Year  = year(Date)       # year
+  )
+
+markdown_cols <- c("MarkDown1", "MarkDown2", "MarkDown3", "MarkDown4", "MarkDown5")
+final_dataset$TotalMarkDown <- rowSums(final_dataset[, markdown_cols], na.rm = TRUE)
+```
+
+## Task 1: Inference: 
+To help identify factors that significantly impact sales;
+```{r}
+lm_model <- lm(Weekly_Sales ~ . - Store -Dept -Date-TotalMarkDown, data=final_dataset)
+summary(lm_model)
+```
+## (T2) Prediction 
+To build a predictive model for weekly store sales with high prediction
+accuracy. For this task, please use the last 30 weeks as testing data and use the MSE for
+prediction error evaluation. Please also evaluate the performance of a deep learning model.
+
+### Train/ Test Split 
+
+```{r}
+
+
+features <-  c('Store', 'Dept','IsHoliday','Temperature', 'Fuel_Price', 'CPI','Unemployment','Size', 'Type','Week', 'Month', 'Year',              'TotalMarkDown') + markdown_cols  
+target <- 'Weekly_Sales'
+
+```
+
+
+
+
