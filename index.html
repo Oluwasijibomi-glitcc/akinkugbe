@@ -483,92 +483,194 @@
          
     </section><!-- End Resume Section -->
 
-    <!-- ======= Portfolio Section ======= -->
-    <section id="portfolio" class="portfolio section-bg">
-      <div class="container" data-aos="fade-up">
-        <div class="section-title">
-          <h2>Projects</h2>
-          <p>Selected data science, analytics, and engineering projects from my academic and professional career.</p>
-        </div>
+<section id="portfolio" class="portfolio section-bg">
+  <div class="container" data-aos="fade-up">
+    <div class="section-title">
+      <h2>Projects</h2>
+      <p>Selected data science, analytics, and engineering projects from my academic and professional career.</p>
+    </div>
 
-        <div class="row">
-          <div class="col-lg-12 d-flex justify-content-center" data-aos="fade-up" data-aos-delay="100">
-            <ul id="portfolio-flters">
-              <li data-filter="*" class="filter-active">All</li>
-              <li data-filter=".filter-ds">Data Science</li>
-              <li data-filter=".filter-de">Data Engineering</li>
-              <li data-filter=".filter-da">Analytics</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
-
-          <!-- GoTo Foods -->
-          <div class="col-lg-4 col-md-6 portfolio-item filter-ds filter-de">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/1024.png" class="img-fluid" alt="GoTo Foods Capstone">
-              <div class="portfolio-info">
-                <h4>GoTo Foods &ndash; Demand Forecasting &amp; Baking Optimization</h4>
-                <p>Data Science &bull; Data Engineering</p>
-                <div class="portfolio-links">
-                  <a href="assets/img/portfolio/1024.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="GoTo Foods Capstone"><i class="bx bx-plus"></i></a>
-                  <a href="https://github.com/Oluwasijibomi-glitcc" title="View on GitHub"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-            <div class="px-2 pt-2 pb-3">
-              <p style="font-size:13px;">Built an XGBoost demand forecasting model and Gurobi optimization pipeline on Databricks Serverless (PySpark) to predict hourly pretzel demand across ~2K Auntie Anne&rsquo;s locations, driving an estimated 5&ndash;10% reduction in product waste. <br><small><strong>Tools:</strong> Python, XGBoost, Gurobi, PySpark, Databricks</small></p>
-            </div>
-          </div>
-
-          <!-- Financial Campaign Optimization -->
-          <div class="col-lg-4 col-md-6 portfolio-item filter-ds filter-da">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/Screen Shot 2022-08-11 at 10.51.49 PM.png" class="img-fluid" alt="Financial Campaign Optimization">
-              <div class="portfolio-info">
-                <h4>Financial Campaign Optimization</h4>
-                <p>Data Science &bull; Analytics</p>
-                <div class="portfolio-links">
-                  <a href="assets/img/portfolio/Screen Shot 2022-08-11 at 10.51.49 PM.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Financial Campaign Optimization"><i class="bx bx-plus"></i></a>
-                  <a href="https://github.com/Oluwasijibomi-glitcc" title="View on GitHub"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-            <div class="px-2 pt-2 pb-3">
-              <p style="font-size:13px;">Compared Logistic Regression, Random Forest, and XGBoost classification models to segment banking customers by lifetime value, building a cost-benefit framework that increased projected campaign profit by 570% (from $46K to $310K). <br><small><strong>Tools:</strong> Python, Scikit-Learn, XGBoost, Pandas</small></p>
-            </div>
-          </div>
-
-          <!-- Enterprise Data Architecture -->
-          <div class="col-lg-4 col-md-6 portfolio-item filter-de filter-da">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/Screen Shot 2022-08-11 at 11.27.21 PM.png" class="img-fluid" alt="Enterprise Data Architecture">
-              <div class="portfolio-info">
-                <h4>Enterprise Data Architecture &amp; ESG Analytics</h4>
-                <p>Data Engineering &bull; Analytics</p>
-                <div class="portfolio-links">
-                  <a href="assets/img/portfolio/Screen Shot 2022-08-11 at 11.27.21 PM.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Enterprise Data Architecture"><i class="bx bx-plus"></i></a>
-                  <a href="https://github.com/Oluwasijibomi-glitcc" title="View on GitHub"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-            <div class="px-2 pt-2 pb-3">
-              <p style="font-size:13px;">Designed a scalable star-schema data architecture for a Fortune 1 retailer in SQL, integrating master data and operational logs across millions of transactions to support ESG analytics and sustainability strategy. <br><small><strong>Tools:</strong> SQL, Star-Schema Design, Dimensional Modeling</small></p>
-            </div>
-          </div>
-
-        </div>
-
-        <!-- Archived undergrad projects (hidden) -->
-        <!-- 
-        <div class="portfolio-item filter-app">Development of Smart Refrigerator (Flutter, Python, SQL, PostgreSQL) - Drexel Senior Project 2022</div>
-        <div class="portfolio-item filter-hardware">Development of An Electric Vehicle Test-Bed (Arduino, C) - Drexel 2021</div>
-        <div class="portfolio-item filter-hardware">Battleship Game Using Arduino and MATLAB - Drexel 2021</div>
-        -->
-
+    <div class="row">
+      <div class="col-lg-12 d-flex justify-content-center" data-aos="fade-up" data-aos-delay="100">
+        <ul id="portfolio-flters">
+          <li data-filter="*" class="filter-active">All</li>
+          <li data-filter=".filter-ds">Data Science</li>
+          <li data-filter=".filter-de">Data Engineering</li>
+          <li data-filter=".filter-da">Analytics</li>
+          <li data-filter=".filter-mkt">Marketing Analytics</li>
+          <li data-filter=".filter-quant">Quantitative Finance</li>
+        </ul>
       </div>
-    </section><!-- End Portfolio Section -->
+    </div>
+
+    <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
+
+      <!-- GoTo Foods -->
+      <!-- ICON HINT: Use a slide deck / presentation (e.g. PowerPoint thumbnail or PDF export of capstone deck) -->
+      <div class="col-lg-4 col-md-6 portfolio-item filter-ds filter-de">
+        <div class="portfolio-wrap">
+          <img src="assets/img/portfolio/1024.png" class="img-fluid" alt="GoTo Foods Capstone">
+          <div class="portfolio-info">
+            <h4>GoTo Foods &ndash; Demand Forecasting &amp; Baking Optimization</h4>
+            <p>Data Science &bull; Data Engineering</p>
+            <div class="portfolio-links">
+              <!-- Link to: Capstone presentation deck (PDF or slides) -->
+              <a href="#" title="View Presentation"><i class="bx bx-slideshow"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="px-2 pt-2 pb-3">
+          <p style="font-size:13px;">Built an XGBoost demand forecasting model and Gurobi optimization pipeline on Databricks Serverless (PySpark) to predict hourly pretzel demand across ~2K Auntie Anne&rsquo;s locations, driving an estimated 5&ndash;10% reduction in product waste. <br><small><strong>Tools:</strong> Python, XGBoost, Gurobi, PySpark, Databricks</small></p>
+        </div>
+      </div>
+
+      <!-- Financial Campaign Optimization -->
+      <div class="col-lg-4 col-md-6 portfolio-item filter-ds filter-da">
+        <div class="portfolio-wrap">
+          <img src="assets/img/portfolio/bank-campaign.png" class="img-fluid" alt="Financial Campaign Optimization">
+          <div class="portfolio-info">
+            <h4>Financial Campaign Optimization</h4>
+            <p>Data Science &bull; Analytics</p>
+            <div class="portfolio-links">
+              <!-- Link 1: Presentation deck — for business/stakeholder audience -->
+              <a href="assets/project/Team_10_Bank_Campaign_Call_Optimization.pdf"
+                 title="View Presentation"
+                 target="_blank">
+                <i class="bx bx-slideshow"></i>
+              </a>
+              <!-- Link 2: Jupyter Notebook — for technical audience -->
+              <a href="assets/project/ISOM_671_Final_Project.ipynb"
+                 title="View Code"
+                 target="_blank">
+                <i class="bx bx-code-alt"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="px-2 pt-2 pb-3">
+          <p style="font-size:13px;">
+            Compared Logistic Regression, Decision Tree, and k-NN classifiers with nested cross-validation
+            to predict term deposit subscriptions from a 41K-row bank telemarketing dataset. Built a
+            cost-benefit framework that increased projected campaign profit by 570% — from $46K to $310K
+            — by ranking customers by conversion probability and optimizing calling depth.
+            <br>
+            <small><strong>Tools:</strong> Python, Scikit-Learn, Pandas, Nested CV, ROC-AUC</small>
+          </p>
+        </div>
+      </div>
+
+      <!-- Enterprise Data Architecture -->
+      <div class="col-lg-4 col-md-6 portfolio-item filter-de filter-da">
+        <div class="portfolio-wrap">
+          <img src="assets/img/portfolio/Screen Shot 2022-08-11 at 11.27.21 PM.png" class="img-fluid" alt="Enterprise Data Architecture">
+          <div class="portfolio-info">
+            <h4>Enterprise Data Architecture &amp; ESG Analytics</h4>
+            <p>Data Engineering &bull; Analytics</p>
+            <div class="portfolio-links">
+              <!-- Link to: Schema diagram, report, or written deliverable (PDF) -->
+              <a href="#" title="View Architecture Report"><i class="bx bx-data"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="px-2 pt-2 pb-3">
+          <p style="font-size:13px;">Designed a scalable star-schema data architecture for a Fortune 1 retailer in SQL, integrating master data and operational logs across millions of transactions to support ESG analytics and sustainability strategy. <br><small><strong>Tools:</strong> SQL, Star-Schema Design, Dimensional Modeling</small></p>
+        </div>
+      </div>
+
+      <!-- Telco Customer Churn Prediction & CLV Analysis -->
+      <div class="col-lg-4 col-md-6 portfolio-item filter-ds filter-mkt">
+        <div class="portfolio-wrap">
+          <img src="assets/img/portfolio/telco-churn.png" class="img-fluid" alt="Telco Churn Prediction">
+          <!-- THUMBNAIL HINT: Use a screenshot of the model comparison results slide or the CLV 
+               segmentation output — both clearly show business impact at a glance -->
+          <div class="portfolio-info">
+            <h4>Telco Customer Churn Prediction &amp; CLV Analysis</h4>
+            <p>Data Science &bull; Marketing Analytics</p>
+            <div class="portfolio-links">
+              <!-- Link 1: Presentation deck — for business/stakeholder audience -->
+              <a href="assets/project/marketing/MKT_FinalPresentation_copy.pptx"
+                 title="View Presentation"
+                 target="_blank">
+                <i class="bx bx-slideshow"></i>
+              </a>
+              <!-- Link 2: Jupyter Notebook — for technical audience -->
+              <a href="assets/project/marketing/FinalProject_1.ipynb"
+                 title="View Code"
+                 target="_blank">
+                <i class="bx bx-code-alt"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="px-2 pt-2 pb-3">
+          <p style="font-size:13px;">
+            Built five ML classifiers (Logistic Regression, Decision Tree, KNN, Random Forest, XGBoost)
+            with nested cross-validation on the IBM Watson Telco dataset to predict customer churn,
+            achieving AUC up to 0.76 and correctly flagging 3 out of 4 churners. Combined churn
+            probability scores with CLV segmentation to prioritize high-value at-risk customers for
+            targeted retention campaigns.
+            <br>
+            <small><strong>Tools:</strong> Python, Scikit-Learn, XGBoost, Nested CV, CLV Segmentation</small>
+          </p>
+        </div>
+      </div>
+
+      <!-- Stock Return Prediction with XGBoost -->
+      <!-- ICON: Three links — presentation, notebook (code), executive summary (PDF) -->
+      <div class="col-lg-4 col-md-6 portfolio-item filter-ds filter-quant">
+        <div class="portfolio-wrap">
+          <img src="assets/img/portfolio/quant-xgboost.png" class="img-fluid" alt="Stock Return Prediction">
+          <!-- THUMBNAIL HINT: Use a screenshot of the decile portfolio performance chart or the
+               monotonic return pattern from the presentation — visually signals quant credibility -->
+          <div class="portfolio-info">
+            <h4>Stock Return Prediction &amp; Long-Short Portfolio</h4>
+            <p>Data Science &bull; Quantitative Finance</p>
+            <div class="portfolio-links">
+              <!-- Link 1: Presentation deck — for business/stakeholder audience -->
+              <a href="project/quant/FinalProject_Presentation_1.pptx"
+                 title="View Presentation"
+                 target="_blank">
+                <i class="bx bx-slideshow"></i>
+              </a>
+              <!-- Link 2: Jupyter Notebook — for technical audience -->
+              <a href="project/quant/FinalProject_2.ipynb"
+                 title="View Code"
+                 target="_blank">
+                <i class="bx bx-code-alt"></i>
+              </a>
+              <!-- Link 3: Executive Summary PDF — for recruiters / quick readers -->
+              <a href="project/quant/Final_Project_-_Executive_Summary_docx.pdf"
+                 title="View Executive Summary"
+                 target="_blank">
+                <i class="bx bx-file"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="px-2 pt-2 pb-3">
+          <p style="font-size:13px;">
+            Built an XGBoost regression model with a 60-month rolling walk-forward window to predict
+            one-month-ahead U.S. equity returns using 10 cross-sectional signals (CRSP/Compustat, 1995&ndash;2024).
+            Constructed a long-short decile portfolio achieving a Sharpe ratio of 0.74, annualized return
+            of 14.0%, and statistically significant alpha of 1.37%/month (t&#8209;stat&nbsp;4.48) over a
+            299-month out-of-sample evaluation.
+            <br>
+            <small><strong>Tools:</strong> Python, XGBoost, CRSP, Compustat, Fama-French, Rolling CV</small>
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Archived undergrad projects (hidden) -->
+    <!--
+    <div class="portfolio-item filter-app">Development of Smart Refrigerator (Flutter, Python, SQL, PostgreSQL) - Drexel Senior Project 2022</div>
+    <div class="portfolio-item filter-hardware">Development of An Electric Vehicle Test-Bed (Arduino, C) - Drexel 2021</div>
+    <div class="portfolio-item filter-hardware">Battleship Game Using Arduino and MATLAB - Drexel 2021</div>
+    -->
+
+  </div>
+</section><!-- End Portfolio Section -->
 
 
 
